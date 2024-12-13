@@ -8,9 +8,9 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'About Us - Dental Billing Solutions',
-  description: 'Learn about our expert dental billing team and our commitment to maximizing revenue for dental practices through professional billing services.',
+  description:
+    'Learn about our expert dental billing team and our commitment to maximizing revenue for dental practices through professional billing services.',
 };
-
 ---
 
 <Layout metadata={metadata}>
@@ -31,18 +31,15 @@ const metadata = {
     items={[
       {
         title: 'Years of Experience',
-        description:
-          'Our team brings decades of combined experience in dental billing and practice management.',
+        description: 'Our team brings decades of combined experience in dental billing and practice management.',
       },
       {
         title: 'Industry Expertise',
-        description:
-          'Deep understanding of dental insurance policies, coding, and compliance requirements.',
+        description: 'Deep understanding of dental insurance policies, coding, and compliance requirements.',
       },
       {
         title: 'Client Success',
-        description:
-          'Proven track record of increasing collections and streamlining operations for dental practices.',
+        description: 'Proven track record of increasing collections and streamlining operations for dental practices.',
       },
     ]}
     image={{
@@ -51,13 +48,11 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Our Story
-      </h3>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Our Story</h3>
       <p>
-        Founded with a mission to simplify dental billing, we understand the challenges dental practices face
-        with insurance claims and revenue management. Our team of experts combines industry knowledge with
-        cutting-edge technology to deliver exceptional results for our clients.
+        Founded with a mission to simplify dental billing, we understand the challenges dental practices face with
+        insurance claims and revenue management. Our team of experts combines industry knowledge with cutting-edge
+        technology to deliver exceptional results for our clients.
       </p>
     </Fragment>
   </Content>
@@ -71,7 +66,8 @@ const metadata = {
     items={[
       {
         title: 'Excellence',
-        description: 'We strive for excellence in every aspect of our service, from claim submission to customer support.',
+        description:
+          'We strive for excellence in every aspect of our service, from claim submission to customer support.',
         icon: 'tabler:star',
       },
       {
@@ -174,9 +170,7 @@ const metadata = {
       },
     ]}
   >
-    <Fragment slot="title">
-      Ready to Transform Your Practice?
-    </Fragment>
+    <Fragment slot="title"> Ready to Transform Your Practice? </Fragment>
     <Fragment slot="subtitle">
       Contact us today to learn how we can help optimize your dental practice's billing operations.
     </Fragment>

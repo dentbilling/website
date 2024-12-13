@@ -11,7 +11,6 @@ const metadata = {
   title: 'Dental Billing Solutions - Expert Dental Insurance Billing Services',
   ignoreTitleTemplate: true,
 };
-
 ---
 
 <Layout metadata={metadata}>
@@ -25,14 +24,18 @@ const metadata = {
       },
       { text: 'Our Services', href: '#services' },
     ]}
-    image={{ src: '~/assets/images/Dental_billing.jpg', alt: 'Professional dental billing specialist working on insurance claims and revenue management for dental practice' }}
+    image={{
+      src: '~/assets/images/Dental_billing.jpg',
+      alt: 'Professional dental billing specialist working on insurance claims and revenue management for dental practice',
+    }}
   >
     <Fragment slot="title">
       Transform Your <span class="text-accent dark:text-white highlight">Dental Practice</span> with Expert Billing Solutions
     </Fragment>
 
     <Fragment slot="subtitle">
-      Focus on providing exceptional patient care while we handle your insurance verification, claims processing, and revenue management. Our comprehensive solutions help maximize your practice\'s revenue and streamline operations.
+      Focus on providing exceptional patient care while we handle your insurance verification, claims processing, and
+      revenue management. Our comprehensive solutions help maximize your practice\'s revenue and streamline operations.
     </Fragment>
   </Hero>
 
@@ -52,12 +55,14 @@ const metadata = {
     items={[
       {
         title: 'Insurance Verification',
-        description: 'Thorough verification of benefits before appointments, ensuring accurate coverage information and reducing claim denials.',
+        description:
+          'Thorough verification of benefits before appointments, ensuring accurate coverage information and reducing claim denials.',
         icon: 'tabler:check',
       },
       {
         title: 'Claims Processing',
-        description: 'Daily claim submission with proper documentation, leading to faster reimbursements and fewer rejections.',
+        description:
+          'Daily claim submission with proper documentation, leading to faster reimbursements and fewer rejections.',
         icon: 'tabler:file-invoice',
       },
       {
@@ -160,12 +165,12 @@ const metadata = {
     items={[
       {
         title: '1. Free Consultation',
-        description: 'Schedule a call to discuss your practice\'s specific needs and challenges',
+        description: "Schedule a call to discuss your practice's specific needs and challenges",
         icon: 'tabler:phone',
       },
       {
         title: '2. Custom Solution',
-        description: 'Receive a tailored plan designed for your practice\'s workflow',
+        description: "Receive a tailored plan designed for your practice's workflow",
         icon: 'tabler:puzzle',
       },
       {
@@ -191,12 +196,11 @@ const metadata = {
       },
     ]}
   >
-    <Fragment slot="title">
-      Ready to Maximize Your Practice Revenue?
-    </Fragment>
+    <Fragment slot="title"> Ready to Maximize Your Practice Revenue? </Fragment>
 
     <Fragment slot="subtitle">
-      Join hundreds of dental practices that have transformed their billing operations and increased their revenue. Contact us today for a free consultation and custom solution proposal.
+      Join hundreds of dental practices that have transformed their billing operations and increased their revenue.
+      Contact us today for a free consultation and custom solution proposal.
     </Fragment>
   </CallToAction>
 </Layout>

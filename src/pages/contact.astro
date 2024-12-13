@@ -6,7 +6,8 @@ import Steps from '~/components/widgets/Steps.astro';
 
 const metadata = {
   title: 'Contact Us - Dental Billing Solutions',
-  description: 'Get in touch with our dental billing experts. We\'re here to help streamline your practice\'s billing operations.',
+  description:
+    "Get in touch with our dental billing experts. We're here to help streamline your practice's billing operations.",
 };
 
 // Web3Forms Access Key
@@ -32,15 +33,15 @@ const WEB3FORMS_KEY = '91f477d7-3130-4e8b-a602-e8d3e44bfa52';
         <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Get Started Today</h2>
         <p class="mt-4 text-lg text-gray-600">Fill out the form below and we'll get back to you within 24 hours.</p>
       </div>
-      
+
       <div class="rounded-lg bg-white p-8 shadow-lg">
         <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
-          <input type="hidden" name="access_key" value={WEB3FORMS_KEY}>
-          <input type="hidden" name="from_name" value="Dental Billing Solutions Contact Form">
-          <input type="hidden" name="to" value="dentalbillinginc@gmail.com">
-          <input type="hidden" name="redirect" value="/thank-you">
-          <input type="hidden" name="subject" value="New Contact Form Submission - Dental Billing Solutions">
-          
+          <input type="hidden" name="access_key" value={WEB3FORMS_KEY} />
+          <input type="hidden" name="from_name" value="Dental Billing Solutions Contact Form" />
+          <input type="hidden" name="to" value="dentalbillinginc@gmail.com" />
+          <input type="hidden" name="redirect" value="/thank-you" />
+          <input type="hidden" name="subject" value="New Contact Form Submission - Dental Billing Solutions" />
+
           <!-- Name Field -->
           <div>
             <label for="name" class="block text-sm font-medium text-gray-700">Practice Name</label>
@@ -105,12 +106,11 @@ const WEB3FORMS_KEY = '91f477d7-3130-4e8b-a602-e8d3e44bfa52';
               rows="4"
               required
               class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500"
-              placeholder="Tell us about your practice and how we can help..."
-            ></textarea>
+              placeholder="Tell us about your practice and how we can help..."></textarea>
           </div>
 
           <!-- Honeypot -->
-          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
 
           <!-- Submit Button -->
           <div>
@@ -134,7 +134,8 @@ const WEB3FORMS_KEY = '91f477d7-3130-4e8b-a602-e8d3e44bfa52';
     items={[
       {
         title: 'Quick Response',
-        description: 'We respond to all inquiries within 24 hours to ensure your practice gets the attention it deserves.',
+        description:
+          'We respond to all inquiries within 24 hours to ensure your practice gets the attention it deserves.',
         icon: 'tabler:clock',
       },
       {
@@ -144,7 +145,7 @@ const WEB3FORMS_KEY = '91f477d7-3130-4e8b-a602-e8d3e44bfa52';
       },
       {
         title: 'Customized Solutions',
-        description: 'We create tailored solutions that fit your practice\'s specific needs and goals.',
+        description: "We create tailored solutions that fit your practice's specific needs and goals.",
         icon: 'tabler:adjustments',
       },
     ]}

@@ -15,7 +15,7 @@ metadata:
   title:
     default: Dental Billing Solutions - Expert Insurance & Claims Processing Services
     template: '%s | Dental Billing Solutions'
-  description: "Expert dental billing services for dental practices. We provide comprehensive insurance verification, claims processing, and credentialing services to maximize your practice revenue and streamline operations."
+  description: 'Expert dental billing services for dental practices. We provide comprehensive insurance verification, claims processing, and credentialing services to maximize your practice revenue and streamline operations.'
   robots:
     index: true
     follow: true
@@ -27,13 +27,13 @@ metadata:
         height: 630
     type: website
     title: Dental Billing Solutions - Streamline Your Practice Revenue
-    description: "Professional dental billing services including insurance verification, claims processing, and credentialing. Maximize your practice revenue with our expert solutions."
+    description: 'Professional dental billing services including insurance verification, claims processing, and credentialing. Maximize your practice revenue with our expert solutions.'
   twitter:
     handle: '@dentalbilling'
     site: '@dentalbilling'
     cardType: summary_large_image
     title: Dental Billing Solutions - Expert Practice Management
-    description: "Transform your dental practice with professional billing services. Insurance verification, claims processing, and credentialing solutions."
+    description: 'Transform your dental practice with professional billing services. Insurance verification, claims processing, and credentialing solutions.'
 
 i18n:
   language: en
