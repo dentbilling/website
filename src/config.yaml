@@ -1,0 +1,77 @@
+site:
+  name: Dental Billing Solutions
+  site: 'https://dentalbilling.com'
+  base: '/'
+  trailingSlash: false
+  contact:
+    email: 'dentalbillinginc@gmail.com'
+    phone: '(617) 510-7053'
+    hours: 'Monday - Friday: 9:00 AM - 5:00 PM EST'
+
+  googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
+
+# Default SEO metadata
+metadata:
+  title:
+    default: Dental Billing Solutions - Expert Insurance & Claims Processing Services
+    template: '%s | Dental Billing Solutions'
+  description: "Expert dental billing services for dental practices. We provide comprehensive insurance verification, claims processing, and credentialing services to maximize your practice revenue and streamline operations."
+  robots:
+    index: true
+    follow: true
+  openGraph:
+    site_name: Dental Billing Solutions
+    images:
+      - url: '~/assets/images/dental-billing-og.jpg'
+        width: 1200
+        height: 630
+    type: website
+    title: Dental Billing Solutions - Streamline Your Practice Revenue
+    description: "Professional dental billing services including insurance verification, claims processing, and credentialing. Maximize your practice revenue with our expert solutions."
+  twitter:
+    handle: '@dentalbilling'
+    site: '@dentalbilling'
+    cardType: summary_large_image
+    title: Dental Billing Solutions - Expert Practice Management
+    description: "Transform your dental practice with professional billing services. Insurance verification, claims processing, and credentialing solutions."
+
+i18n:
+  language: en
+  dir: ltr
+
+apps:
+  blog:
+    isEnabled: false
+    postsPerPage: 6
+
+    post:
+      isEnabled: false
+      permalink: '/%slug%'
+      robots:
+        index: true
+
+    list:
+      isEnabled: false
+      pathname: 'blog'
+      robots:
+        index: true
+
+    category:
+      isEnabled: false
+      pathname: 'category'
+      robots:
+        index: true
+
+    tag:
+      isEnabled: false
+      pathname: 'tag'
+      robots:
+        index: true
+
+analytics:
+  vendors:
+    googleAnalytics:
+      id: null
+
+ui:
+  theme: 'system'

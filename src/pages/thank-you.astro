@@ -1,0 +1,66 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+
+const metadata = {
+  title: 'Thank You - Dental Billing Solutions',
+  description: 'Thank you for contacting Dental Billing Solutions. We will be in touch with you shortly.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget -->
+  <Hero
+    tagline="Thank You"
+    title="Message Received!"
+    subtitle="We appreciate you reaching out to us. Our team will review your message and get back to you within 24 hours."
+    image={{
+      src: '~/assets/images/Insurance_card.jpg',
+      alt: 'Thank you message',
+    }}
+  />
+
+  <!-- Next Steps -->
+  <Features
+    title="What's Next?"
+    subtitle="Here's what you can expect from us"
+    columns={3}
+    items={[
+      {
+        title: 'Quick Response',
+        description: 'Our team will review your inquiry and respond within 24 business hours.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Personalized Solution',
+        description: 'We\'ll prepare a customized plan based on your practice\'s needs.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Free Consultation',
+        description: 'Schedule a detailed discussion about how we can help your practice.',
+        icon: 'tabler:calendar',
+      },
+    ]}
+  />
+
+  <!-- Contact Information -->
+  <Features
+    title="Have Questions?"
+    subtitle="You can always reach us directly"
+    columns={2}
+    items={[
+      {
+        title: 'Email Us',
+        description: 'dentalbillinginc@gmail.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Call Us',
+        description: '(617) 510-7053',
+        icon: 'tabler:phone',
+      },
+    ]}
+  />
+</Layout>

@@ -1,0 +1,171 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Insurance Verification Services - Dental Benefits Verification',
+  description: 'Comprehensive dental insurance verification services. Real-time eligibility checks, benefits verification, and coverage breakdown.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget -->
+  <Hero
+    tagline="Insurance Verification"
+    title="Streamline Your Insurance Verification Process"
+    subtitle="Fast and accurate insurance verification services to reduce claim denials and improve patient satisfaction."
+    image={{
+      src: '~/assets/images/Insurance_card.jpg',
+      alt: 'Insurance verification process',
+    }}
+  />
+
+  <!-- Service Features -->
+  <Features
+    title="Comprehensive Verification Services"
+    subtitle="Detailed benefits verification for informed decision-making"
+    columns={3}
+    items={[
+      {
+        title: 'Real-time Eligibility',
+        description: 'Instant verification of patient insurance eligibility and coverage status.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Benefits Breakdown',
+        description: 'Detailed breakdown of covered services, frequencies, and limitations.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Pre-Authorization',
+        description: 'Handling of pre-authorization requirements for complex procedures.',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'Coverage Details',
+        description: 'Verification of deductibles, maximums, and coverage percentages.',
+        icon: 'tabler:file-description',
+      },
+      {
+        title: 'Plan Updates',
+        description: 'Regular monitoring of plan changes and coverage updates.',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'Documentation',
+        description: 'Complete documentation of all verification details for reference.',
+        icon: 'tabler:folder',
+      },
+    ]}
+  />
+
+  <!-- Verification Process -->
+  <Steps
+    title="Our Verification Process"
+    items={[
+      {
+        title: 'Information Collection',
+        description: 'Gather patient and insurance information accurately.',
+        icon: 'tabler:file-info',
+      },
+      {
+        title: 'Benefits Verification',
+        description: 'Contact insurance providers to verify coverage details.',
+        icon: 'tabler:phone',
+      },
+      {
+        title: 'Documentation',
+        description: 'Record all verified information in your practice management system.',
+        icon: 'tabler:notes',
+      },
+      {
+        title: 'Communication',
+        description: 'Share verification results with your team and patients.',
+        icon: 'tabler:message-circle',
+      },
+    ]}
+  />
+
+  <!-- Benefits Section -->
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Reduced Claim Denials',
+        description:
+          'Accurate verification helps prevent claim denials due to eligibility issues.',
+      },
+      {
+        title: 'Improved Patient Experience',
+        description:
+          'Clear understanding of coverage helps set proper expectations with patients.',
+      },
+      {
+        title: 'Time Savings',
+        description:
+          'Let our team handle time-consuming verification calls while you focus on patient care.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/Insurance_policy.jpg',
+      alt: 'Insurance verification benefits',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Benefits of Professional Verification
+      </h3>
+      <p>
+        Our insurance verification services help streamline your practice operations by ensuring accurate
+        coverage information before treatment. This leads to fewer claim denials, improved cash flow,
+        and better patient satisfaction.
+      </p>
+    </Fragment>
+  </Content>
+
+  <!-- Pricing Information -->
+  <Features
+    title="Verification Pricing"
+    subtitle="Clear and transparent pricing for all verification services"
+    columns={2}
+    items={[
+      {
+        title: 'Comprehensive Breakdown',
+        description: 'Rate: $3.00 per verification\n• Complete verification of benefits\n• Full breakdown details\n• System upload included',
+        icon: 'tabler:file-description',
+      },
+      {
+        title: 'Walk-in Appointments',
+        description: 'Rate: $4.75 per verification\n• Emergency priority handling\n• Immediate verification\n• Urgent response',
+        icon: 'tabler:alert-circle',
+      },
+    ]}
+  />
+
+  <!-- Call to Action -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Start Verifying',
+        href: '/contact',
+        icon: 'tabler:message',
+      },
+      {
+        text: 'View All Services',
+        href: '/services',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Ready to Streamline Your Verification Process?
+    </Fragment>
+    <Fragment slot="subtitle">
+      Contact us today to learn how our verification services can help your practice reduce denials and improve efficiency.
+    </Fragment>
+  </CallToAction>
+</Layout>

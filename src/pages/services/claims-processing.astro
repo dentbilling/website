@@ -1,0 +1,176 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Claims Processing Services - Expert Dental Claims Management',
+  description: 'Professional dental claims processing services. Fast submission, follow-up, and maximum reimbursement for your dental practice.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget -->
+  <Hero
+    tagline="Claims Processing"
+    title="Expert Claims Processing for Maximum Reimbursement"
+    subtitle="Fast, accurate, and efficient claims processing services to optimize your practice's revenue cycle."
+    image={{
+      src: '~/assets/images/Insurance_policy.jpg',
+      alt: 'Dental claims processing',
+    }}
+  />
+
+  <!-- Service Features -->
+  <Features
+    title="Comprehensive Claims Services"
+    subtitle="Complete claims management solutions for your practice"
+    columns={3}
+    items={[
+      {
+        title: 'Quick Submission',
+        description: 'Claims submitted within 24 hours of service completion.',
+        icon: 'tabler:send',
+      },
+      {
+        title: 'Accuracy Check',
+        description: 'Multiple verification steps to ensure claim accuracy.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Follow-up',
+        description: 'Regular follow-up on pending and denied claims.',
+        icon: 'tabler:repeat',
+      },
+      {
+        title: 'Denial Management',
+        description: 'Expert handling of claim denials and appeals process.',
+        icon: 'tabler:alert-triangle',
+      },
+      {
+        title: 'Status Tracking',
+        description: 'Real-time tracking of claim status and payments.',
+        icon: 'tabler:chart-dots',
+      },
+      {
+        title: 'Reporting',
+        description: 'Detailed reports on claims performance and trends.',
+        icon: 'tabler:report',
+      },
+    ]}
+  />
+
+  <!-- Process Steps -->
+  <Steps
+    title="Our Claims Process"
+    items={[
+      {
+        title: 'Initial Review',
+        description: 'Thorough review of claim information and documentation.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Submission',
+        description: 'Electronic submission with proper coding and attachments.',
+        icon: 'tabler:send',
+      },
+      {
+        title: 'Tracking',
+        description: 'Continuous monitoring of claim status and follow-up.',
+        icon: 'tabler:radar',
+      },
+      {
+        title: 'Resolution',
+        description: 'Quick resolution of any issues or denials.',
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <!-- Benefits Section -->
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Faster Payments',
+        description:
+          'Quick submission and follow-up lead to faster claim payments.',
+      },
+      {
+        title: 'Higher Acceptance Rate',
+        description:
+          'Accurate submissions reduce claim rejections and denials.',
+      },
+      {
+        title: 'Cost Savings',
+        description:
+          'Reduce administrative costs and improve collection rates.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/Insurance_card.jpg',
+      alt: 'Claims processing benefits',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Why Choose Our Claims Processing?
+      </h3>
+      <p>
+        Our experienced team ensures your claims are processed quickly and accurately, maximizing
+        reimbursement while minimizing denials. We handle all aspects of claims management,
+        from submission to payment posting.
+      </p>
+    </Fragment>
+  </Content>
+
+  <!-- Pricing Information -->
+  <Features
+    title="Claims Processing Rates"
+    subtitle="Transparent pricing for all claims services"
+    columns={3}
+    items={[
+      {
+        title: 'Claims Submission',
+        description: 'Rate: $2.50 per claim\n• Complete documentation\n• Follow-up included\n• Status tracking',
+        icon: 'tabler:file-invoice',
+      },
+      {
+        title: 'Payment Posting',
+        description: 'Rate: $0.75 per claim\n• Accurate recording\n• Payment verification\n• Balance tracking',
+        icon: 'tabler:cash',
+      },
+      {
+        title: 'Plan Entry',
+        description: 'Rate: $0.50 per entry\n• Software setup\n• Plan details input\n• System verification',
+        icon: 'tabler:database',
+      },
+    ]}
+  />
+
+  <!-- Call to Action -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get Started',
+        href: '/contact',
+        icon: 'tabler:message',
+      },
+      {
+        text: 'View Pricing',
+        href: '/pricing',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Ready to Optimize Your Claims Process?
+    </Fragment>
+    <Fragment slot="subtitle">
+      Contact us today for a free consultation and learn how we can help improve your practice's claims management.
+    </Fragment>
+  </CallToAction>
+</Layout>

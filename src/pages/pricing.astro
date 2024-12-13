@@ -1,0 +1,154 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Pricing - Dental Billing Services',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Main Pricing Section -->
+  <Features
+    title="Insurance Verification Services"
+    subtitle="Clear and transparent pricing for all verification services"
+    columns={2}
+    items={[
+      {
+        title: 'Comprehensive Breakdown',
+        description: 'Rate: $3.00<br/>• Complete verification of benefits<br/>• Full breakdown details<br/>• System upload included<br/>• Practice-specific customization',
+        icon: 'tabler:file-description',
+      },
+      {
+        title: 'Walk-in Appointments',
+        description: 'Rate: $4.75<br/>• Emergency priority handling<br/>• Immediate verification<br/>• High-priority processing<br/>• Urgent response',
+        icon: 'tabler:alert-circle',
+      },
+      {
+        title: 'HMO\'s or Medicaid',
+        description: 'Rate: $1.50<br/>• Eligibility verification<br/>• Past service record check<br/>• Benefit breakdown<br/>• Coverage verification',
+        icon: 'tabler:heart',
+      },
+      {
+        title: 'Return Appointments',
+        description: 'Rate: $1.50<br/>• Monthly verification<br/>• Eligibility checks<br/>• Past service verification<br/>• Regular updates',
+        icon: 'tabler:calendar',
+      },
+    ]}
+  />
+
+  <!-- Claims and Payment Section -->
+  <Features
+    title="Claims & Payment Processing"
+    subtitle="Efficient and accurate claims handling"
+    columns={3}
+    items={[
+      {
+        title: 'Claims Submission',
+        description: 'Rate: $2.50 per claim<br/>• Complete documentation<br/>• Follow-up included<br/>• Status tracking<br/>• Resolution handling',
+        icon: 'tabler:file-invoice',
+      },
+      {
+        title: 'Payment Posting',
+        description: 'Rate: $0.75 per claim<br/>• Accurate recording<br/>• Payment verification<br/>• Balance tracking<br/>• Reconciliation',
+        icon: 'tabler:cash',
+      },
+      {
+        title: 'Plan Entry',
+        description: 'Rate: $0.50<br/>• Software setup<br/>• Plan details input<br/>• System verification<br/>• Data validation',
+        icon: 'tabler:database',
+      },
+    ]}
+  />
+  <Features
+  title="Credentialing & Network Services"
+  subtitle="Professional credentialing and network management solutions"
+  columns={3}
+  items={[
+    {
+      title: 'Network Participation',
+      description: 'Rate: $250<br/>• Per insurance/provider<br/>• Complete enrollment process<br/>• Documentation handling<br/>• Status tracking',
+      icon: 'tabler:network',
+    },
+    {
+      title: 'Insurance Negotiation',
+      description: 'Rate: $200<br/>• Per insurance/location/provider<br/>• Fee schedule analysis<br/>• Contract review<br/>• Rate negotiation',
+      icon: 'tabler:businessplan',
+    },
+    {
+      title: 'Recredentialing',
+      description: 'Rate: $150<br/>• Complete renewal process<br/>• Documentation updates<br/>• Compliance verification<br/>• Status monitoring',
+      icon: 'tabler:refresh',
+    },
+    {
+      title: 'EFT Enrollment',
+      description: 'Rate: $80<br/>• Per insurance<br/>• Setup and verification<br/>• Documentation handling<br/>• Process monitoring',
+      icon: 'tabler:credit-card',
+    },
+    {
+      title: 'Network Optimization',
+      description: 'Rate: $200<br/>• Per location<br/>• Network analysis<br/>• Performance review<br/>• Optimization strategy',
+      icon: 'tabler:chart-arrows',
+    },
+    {
+      title: 'Additional Services',
+      description: '• Termination: $100<br/>• Affiliation (indirect participation): $50<br/>• Custom solutions available<br/>• Flexible options',
+      icon: 'tabler:plus',
+    },
+  ]}
+/>
+
+  <!-- Additional Information -->
+  <Steps
+    title="Our Pricing Process"
+    subtitle="Simple and straightforward billing process"
+    items={[
+      {
+        title: 'Clear Rates',
+        description: 'All prices are listed upfront with no hidden fees',
+        icon: 'tabler:cash',
+      },
+      {
+        title: 'Monthly Billing',
+        description: 'Convenient monthly billing with detailed breakdowns',
+        icon: 'tabler:calendar',
+      },
+      {
+        title: 'Volume Benefits',
+        description: 'Special rates for high-volume practices',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Flexible Terms',
+        description: 'No long-term contracts required',
+        icon: 'tabler:checkbox',
+      },
+    ]}
+  />
+
+  <!-- Call to Action -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get Started',
+        href: '/contact',
+        icon: 'tabler:phone',
+      },
+      {
+        text: 'Learn More',
+        href: '/services',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Ready to Optimize Your Billing Process?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Contact us today for a personalized consultation and see how we can help streamline your practice's billing operations.
+    </Fragment>
+  </CallToAction>
+</Layout>

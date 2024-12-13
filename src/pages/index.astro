@@ -1,0 +1,202 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Dental Billing Solutions - Expert Dental Insurance Billing Services',
+  ignoreTitleTemplate: true,
+};
+
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Free Consultation',
+        href: '/contact',
+        icon: 'tabler:message-circle',
+      },
+      { text: 'Our Services', href: '#services' },
+    ]}
+    image={{ src: '~/assets/images/Dental_billing.jpg', alt: 'Professional dental billing specialist working on insurance claims and revenue management for dental practice' }}
+  >
+    <Fragment slot="title">
+      Transform Your <span class="text-accent dark:text-white highlight">Dental Practice</span> with Expert Billing Solutions
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Focus on providing exceptional patient care while we handle your insurance verification, claims processing, and revenue management. Our comprehensive solutions help maximize your practice\'s revenue and streamline operations.
+    </Fragment>
+  </Hero>
+
+  <Stats
+    stats={[
+      { title: 'Claims Success Rate', amount: '98%' },
+      { title: 'Faster Reimbursement', amount: '45%' },
+      { title: 'Average Revenue Increase', amount: '25%' },
+      { title: 'Years of Experience', amount: '15+' },
+    ]}
+  />
+
+  <Features
+    id="services"
+    title="Comprehensive Dental Billing Services"
+    subtitle="End-to-end solutions for modern dental practices"
+    items={[
+      {
+        title: 'Insurance Verification',
+        description: 'Thorough verification of benefits before appointments, ensuring accurate coverage information and reducing claim denials.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Claims Processing',
+        description: 'Daily claim submission with proper documentation, leading to faster reimbursements and fewer rejections.',
+        icon: 'tabler:file-invoice',
+      },
+      {
+        title: 'Credentialing Services',
+        description: 'Expert handling of provider credentialing, ensuring compliance and network participation.',
+        icon: 'tabler:certificate',
+      },
+      {
+        title: 'Payment Posting',
+        description: 'Accurate and timely payment posting, maintaining clean accounts and optimal cash flow.',
+        icon: 'tabler:cash',
+      },
+    ]}
+  />
+
+  <Content
+    isReversed
+    title="Streamlined Insurance Verification"
+    subtitle="Prevent claim denials before they happen"
+    items={[
+      {
+        title: 'Comprehensive Benefits Check',
+        description: 'Detailed verification of coverage, benefits, and policy specifics',
+      },
+      {
+        title: 'Network Status Confirmation',
+        description: 'Clear determination of in-network vs out-of-network status',
+      },
+      {
+        title: 'Accurate Fee Schedules',
+        description: 'Proper setup of contracted fees for precise treatment planning',
+      },
+      {
+        title: 'Quick Turnaround',
+        description: 'Rapid verification enabling immediate treatment decisions',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/Insurance_card.jpg',
+      alt: 'Dental insurance verification process showing detailed benefits analysis',
+    }}
+  />
+
+  <Content
+    title="Expert Claims Management"
+    subtitle="Maximizing Your Reimbursements"
+    items={[
+      {
+        title: 'Same-Day Submissions',
+        description: 'Claims submitted daily with all required X-rays and narratives',
+      },
+      {
+        title: 'Proactive Follow-up',
+        description: 'Consistent tracking and resolution of outstanding claims',
+      },
+      {
+        title: 'Denial Management',
+        description: 'Swift handling of claim denials and appeals process',
+      },
+      {
+        title: 'Regular Reporting',
+        description: 'Detailed updates on claim status and resolution progress',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/Insurance_policy.jpg',
+      alt: 'Professional claims processing and management system',
+    }}
+  />
+
+  <Features
+    title="Efficient Payment Management"
+    subtitle="Maintaining Your Financial Health"
+    items={[
+      {
+        title: 'Accurate Posting',
+        description: 'Precise recording of all payments and adjustments across all insurance carriers',
+        icon: 'tabler:calculator',
+      },
+      {
+        title: 'Payment Reconciliation',
+        description: 'Detailed matching of payments with procedures and outstanding balances',
+        icon: 'tabler:receipt',
+      },
+      {
+        title: 'ERA/EFT Processing',
+        description: 'Electronic payment processing for faster revenue collection',
+        icon: 'tabler:transfer',
+      },
+      {
+        title: 'Financial Reporting',
+        description: 'Comprehensive reports for better financial visibility and planning',
+        icon: 'tabler:chart-bar',
+      },
+    ]}
+  />
+
+  <Steps
+    title="Start Optimizing Your Practice Today"
+    items={[
+      {
+        title: '1. Free Consultation',
+        description: 'Schedule a call to discuss your practice\'s specific needs and challenges',
+        icon: 'tabler:phone',
+      },
+      {
+        title: '2. Custom Solution',
+        description: 'Receive a tailored plan designed for your practice\'s workflow',
+        icon: 'tabler:puzzle',
+      },
+      {
+        title: '3. Seamless Integration',
+        description: 'Quick implementation with minimal disruption to your practice',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: '4. Ongoing Support',
+        description: '24/7 access to our expert team for any assistance needed',
+        icon: 'tabler:headset',
+      },
+    ]}
+  />
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Schedule Free Consultation',
+        href: '/contact',
+        icon: 'tabler:calendar',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Ready to Maximize Your Practice Revenue?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Join hundreds of dental practices that have transformed their billing operations and increased their revenue. Contact us today for a free consultation and custom solution proposal.
+    </Fragment>
+  </CallToAction>
+</Layout>

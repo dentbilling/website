@@ -1,0 +1,152 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Dental Billing Services - Expert Claims Processing & Revenue Management',
+  description: 'Professional dental billing services to maximize your practice revenue. Expert claims processing, payment posting, and revenue cycle management.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget -->
+  <Hero
+    tagline="Dental Billing Services"
+    title="Maximize Your Practice Revenue with Expert Billing Solutions"
+    subtitle="Let our experienced team handle your dental billing while you focus on providing excellent patient care."
+    image={{
+      src: '~/assets/images/Dental_billing.jpg',
+      alt: 'Dental billing professional working on claims',
+    }}
+  />
+
+  <!-- Key Features -->
+  <Features
+    title="Comprehensive Billing Solutions"
+    subtitle="Everything you need to optimize your practice's revenue cycle"
+    columns={3}
+    items={[
+      {
+        title: 'Claims Processing',
+        description: 'Expert handling of dental claims with meticulous attention to detail for maximum reimbursement.',
+        icon: 'tabler:file-check',
+      },
+      {
+        title: 'Payment Posting',
+        description: 'Accurate and timely posting of all payments, adjustments, and denials.',
+        icon: 'tabler:cash',
+      },
+      {
+        title: 'Denial Management',
+        description: 'Proactive handling of claim denials and appeals to ensure optimal reimbursement.',
+        icon: 'tabler:alert-triangle',
+      },
+      {
+        title: 'AR Management',
+        description: 'Systematic tracking and follow-up of aging accounts to reduce outstanding balances.',
+        icon: 'tabler:chart-dots',
+      },
+      {
+        title: 'Reporting',
+        description: 'Detailed financial reports and analytics to track your practice performance.',
+        icon: 'tabler:report',
+      },
+      {
+        title: 'Compliance',
+        description: 'HIPAA-compliant processes and up-to-date with industry regulations.',
+        icon: 'tabler:shield-check',
+      },
+    ]}
+  />
+
+  <!-- Process Steps -->
+  <Steps
+    title="Our Billing Process"
+    items={[
+      {
+        title: 'Claim Submission',
+        description: 'Claims are submitted within 24 hours of service with proper coding and documentation.',
+        icon: 'tabler:send',
+      },
+      {
+        title: 'Payment Processing',
+        description: 'Payments are posted accurately and reconciled within 48 hours of receipt.',
+        icon: 'tabler:coin',
+      },
+      {
+        title: 'Follow-up',
+        description: 'Regular follow-up on unpaid claims and denials to ensure timely payment.',
+        icon: 'tabler:repeat',
+      },
+      {
+        title: 'Reporting',
+        description: 'Monthly reports on practice performance, collections, and areas for improvement.',
+        icon: 'tabler:chart-bar',
+      },
+    ]}
+  />
+
+  <!-- Benefits -->
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Increased Collections',
+        description:
+          'Our expert team ensures maximum reimbursement through accurate claim submission and diligent follow-up.',
+      },
+      {
+        title: 'Reduced Overhead',
+        description:
+          'Eliminate the need for in-house billing staff and reduce administrative costs.',
+      },
+      {
+        title: 'Faster Payments',
+        description:
+          'Quick claim submission and efficient follow-up lead to faster payments and improved cash flow.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/Insurance_policy.jpg',
+      alt: 'Dental billing benefits',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Why Choose Our Billing Services?
+      </h3>
+      <p>
+        Our dedicated team of billing professionals has years of experience in dental billing. We understand
+        the complexities of dental insurance and work diligently to maximize your reimbursements while
+        maintaining compliance with all regulations.
+      </p>
+    </Fragment>
+  </Content>
+
+  <!-- Call to Action -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get Started',
+        href: '/contact',
+        icon: 'tabler:message',
+      },
+      {
+        text: 'View Pricing',
+        href: '/pricing',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Ready to Optimize Your Billing Process?
+    </Fragment>
+    <Fragment slot="subtitle">
+      Contact us today for a free consultation and learn how we can help improve your practice's revenue cycle.
+    </Fragment>
+  </CallToAction>
+</Layout>

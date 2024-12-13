@@ -1,0 +1,184 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'About Us - Dental Billing Solutions',
+  description: 'Learn about our expert dental billing team and our commitment to maximizing revenue for dental practices through professional billing services.',
+};
+
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget -->
+  <Hero
+    tagline="About Us"
+    title="Your Trusted Partner in Dental Practice Success"
+    subtitle="We're dedicated to helping dental practices thrive through expert billing services and revenue cycle management."
+    image={{
+      src: '~/assets/images/Dental_billing.jpg',
+      alt: 'Dental Billing Solutions team at work',
+    }}
+  />
+
+  <!-- Our Story -->
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Years of Experience',
+        description:
+          'Our team brings decades of combined experience in dental billing and practice management.',
+      },
+      {
+        title: 'Industry Expertise',
+        description:
+          'Deep understanding of dental insurance policies, coding, and compliance requirements.',
+      },
+      {
+        title: 'Client Success',
+        description:
+          'Proven track record of increasing collections and streamlining operations for dental practices.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/Insurance_policy.jpg',
+      alt: 'Our team working on dental claims',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Our Story
+      </h3>
+      <p>
+        Founded with a mission to simplify dental billing, we understand the challenges dental practices face
+        with insurance claims and revenue management. Our team of experts combines industry knowledge with
+        cutting-edge technology to deliver exceptional results for our clients.
+      </p>
+    </Fragment>
+  </Content>
+
+  <!-- Values -->
+  <Features
+    id="values"
+    title="Our Core Values"
+    subtitle="The principles that guide our work every day"
+    columns={3}
+    items={[
+      {
+        title: 'Excellence',
+        description: 'We strive for excellence in every aspect of our service, from claim submission to customer support.',
+        icon: 'tabler:star',
+      },
+      {
+        title: 'Integrity',
+        description: 'We maintain the highest standards of honesty and ethical conduct in all our operations.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Innovation',
+        description: 'We continuously adapt and improve our processes to deliver better results for our clients.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Reliability',
+        description: 'You can count on us to consistently deliver high-quality service and support.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Partnership',
+        description: 'We work as an extension of your practice, committed to your long-term success.',
+        icon: 'tabler:heart-handshake',
+      },
+      {
+        title: 'Expertise',
+        description: 'Our team stays current with industry changes to provide expert guidance and service.',
+        icon: 'tabler:certificate',
+      },
+    ]}
+  />
+
+  <!-- Why Choose Us -->
+  <Steps
+    title="Why Choose Us"
+    items={[
+      {
+        title: 'Dedicated Support',
+        description: 'Your practice gets a dedicated billing specialist who understands your specific needs.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Proven Results',
+        description: 'Track record of increasing collections and reducing aging accounts receivable.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Technology-Driven',
+        description: 'We use advanced software and systems to ensure efficient and accurate billing.',
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: 'HIPAA Compliant',
+        description: 'Strict adherence to all privacy and security regulations to protect your data.',
+        icon: 'tabler:lock',
+      },
+    ]}
+  />
+
+  <!-- Stats -->
+  <Features
+    id="statistics"
+    title="Our Impact"
+    subtitle="The numbers speak for themselves"
+    columns={4}
+    items={[
+      {
+        title: '15+',
+        description: 'Years of Experience',
+        icon: 'tabler:calendar',
+      },
+      {
+        title: '98%',
+        description: 'Clean Claims Rate',
+        icon: 'tabler:chart-pie',
+      },
+      {
+        title: '24h',
+        description: 'Average Response Time',
+        icon: 'tabler:clock',
+      },
+      {
+        title: '100%',
+        description: 'Client Satisfaction',
+        icon: 'tabler:thumb-up',
+      },
+    ]}
+  />
+
+  <!-- Contact CTA -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get Started',
+        href: '/contact',
+        icon: 'tabler:message',
+      },
+      {
+        text: 'Learn More',
+        href: '/services',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Ready to Transform Your Practice?
+    </Fragment>
+    <Fragment slot="subtitle">
+      Contact us today to learn how we can help optimize your dental practice's billing operations.
+    </Fragment>
+  </CallToAction>
+</Layout>
